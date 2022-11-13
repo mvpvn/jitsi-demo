@@ -1,0 +1,11 @@
+- name: Configure hosts file
+  template: src=hosts.j2 dest=/etc/hosts
+
+- name: Copying the Directory's contents (sub directories/files)
+  become: true 
+  copy:
+    src: ../shell/
+    dest: /tmp/shell
+    # owner: apache
+    # group: apache
+    mode: 0655

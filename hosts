@@ -1,0 +1,11 @@
+[jitsi1]
+192.168.56.111
+
+[jitsi_all:vars]
+ansible_user=vagrant
+
+[jitsi_standalone:children]
+jitsi1
+
+[jitsi_all:children]
+jitsi_standalone

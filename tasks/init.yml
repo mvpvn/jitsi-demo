@@ -1,0 +1,38 @@
+---
+
+- name: Execute the config_jitsi_meet shell
+  become: yes
+  ansible.builtin.shell: /tmp/shell/config_jitsi_meet.sh >> /tmp/jitsi_config_jitsi_meet.txt
+
+- name: Execute the config_firewall shell
+  become: yes
+  ansible.builtin.shell: /tmp/shell/config_firewall.sh >> /tmp/jitsi_config_firewall.txt
+
+# - name: include file list
+#   include_vars:
+#     file: "{{ myinput }}"
+#     name: files
+
+# - name: concatenate
+#   ansible.builtin.template:
+#     src: templates/concatenate.j2
+#     dest: "{{ myoutput }}"
+
+# - name: Create installation directory
+#   file:
+#     path: '/fluentd/etc'
+#     state: directory
+
+# - name: Copy file with owner and permissions
+#   copy:
+#     src: ./efk/fluentd/conf/fluentd.conf
+#     dest: '/fluentd/etc'
+#     mode: '0644'
+
+# - name: Copy file with owner and permissions
+#   copy:
+#     src: ./efk
+#     dest: '{{ efk_install_dir }}'
+#     mode: '0644'
+
+...
