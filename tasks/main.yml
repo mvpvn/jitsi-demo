@@ -3,6 +3,6 @@
 - import_tasks: base.yml
 - import_tasks: dependencies.yml
 - import_tasks: init.yml
-# - import_tasks: install.yml
+- import_tasks: install.yml
 
 ...

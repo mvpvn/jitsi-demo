@@ -6,6 +6,4 @@
   copy:
     src: ../shell/
     dest: /tmp/shell
-    # owner: apache
-    # group: apache
     mode: 0655

@@ -1,14 +1,11 @@
 ---
 
-- name: Execute the install_jitsi_meet shell
-  become: yes
-  ansible.builtin.shell: /tmp/shell/install_jitsi_meet.sh >> /tmp/jitsi_install_jitsi_meet.txt
-
-# - name: Deploy Docker Compose stack
+# - name: Execute the install_jitsi_meet shell
 #   become: yes
-#   community.docker.docker_compose:
-#     project_src: '{{ efk_install_dir }}/efk'
-#     files:
-#     - docker-compose.yml
+#   ansible.builtin.shell: /tmp/shell/install_jitsi_meet.sh >> /tmp/jitsi_install_jitsi_meet.txt
+
+- name: Execute the install_jitsi_admin shell
+  become: yes
+  ansible.builtin.shell: /tmp/shell/install_jitsi_admin.sh >> /tmp/jitsi_install_jitsi_admin.txt
 
 ...
